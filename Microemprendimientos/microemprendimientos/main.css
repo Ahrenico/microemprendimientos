@@ -1,0 +1,65 @@
+.buscador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+menu{
+    padding: 16px;
+}
+.menu-item{
+    list-style-type: none;
+    margin: 0;
+    padding: 50px;
+    text-align: center; 
+    border: 1px;
+    border-color: aqua;
+
+
+  }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; 
+}
+
+
+li {
+    display: inline-block; 
+    margin: 0 10px; 
+}
+
+li a {
+    display: block;
+    color: black;
+    text-decoration: none;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+.titulo{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 10vh;
+
+}
+
+#aaaa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    list-style-type: none;
+    margin: 0;
+    padding: 50px;
+    text-align: center; 
+    border: 1px;
+    border-color: aqua;
+}
