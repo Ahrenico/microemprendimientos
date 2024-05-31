@@ -1,24 +1,128 @@
-{
-    "colaborador": {
-        "nombre": "",
-        "apellido": "",
-        "telefono": "",
-        "contraseña": "",
-        "email": "",
-        "emprendimiento": {
+[
+    {
+        "colaborador": {
             "nombre": "",
-            "descripcion": "",
-            "rubro": "",
-            "direccion": "",
-            "coordenadas": "",
-            "contacto": "",
-            "redes_sociales": "",
-            "formas_de_pago": "",
-            "zona_de_influencia": "",
-            "restricciones": "",
-            "foto": "",
-            "horarios": "",
-            "visibilidad": ""
+            "apellido": "",
+            "telefono": "",
+            "contraseña": "",
+            "email": "",
+            "emprendimiento": {
+                "nombre": "Bazar",
+                "descripcion": "",
+                "rubro": "",
+                "direccion": "Av. Corrientes",
+                "coordenadas": "",
+                "contacto": "",
+                "redes_sociales": "",
+                "formas_de_pago": "",
+                "zona_de_influencia": "",
+                "restricciones": "",
+                "foto": "",
+                "horarios": "",
+                "visibilidad": "",
+                "destacado": true
+            }
+        }
+    },
+    {
+        "colaborador": {
+            "nombre": "",
+            "apellido": "",
+            "telefono": "",
+            "contraseña": "",
+            "email": "",
+            "emprendimiento": {
+                "nombre": "Almacen",
+                "descripcion": "",
+                "rubro": "",
+                "direccion": "Gral. Rivas",
+                "coordenadas": "",
+                "contacto": "",
+                "redes_sociales": "",
+                "formas_de_pago": "",
+                "zona_de_influencia": "",
+                "restricciones": "",
+                "foto": "",
+                "horarios": "",
+                "visibilidad": "",
+                "destacado": true
+            }
+        }
+    },
+    {
+        "colaborador": {
+            "nombre": "",
+            "apellido": "",
+            "telefono": "",
+            "contraseña": "",
+            "email": "",
+            "emprendimiento": {
+                "nombre": "Barberia",
+                "descripcion": "",
+                "rubro": "",
+                "direccion": "Montevideo",
+                "coordenadas": "",
+                "contacto": "",
+                "redes_sociales": "",
+                "formas_de_pago": "",
+                "zona_de_influencia": "",
+                "restricciones": "",
+                "foto": "",
+                "horarios": "",
+                "visibilidad": "",
+                "destacado": true
+            }
+        }
+    },
+    {
+        "colaborador": {
+            "nombre": "",
+            "apellido": "",
+            "telefono": "",
+            "contraseña": "",
+            "email": "",
+            "emprendimiento": {
+                "nombre": "Bicileteria",
+                "descripcion": "",
+                "rubro": "",
+                "direccion": "Pampa",
+                "coordenadas": "",
+                "contacto": "",
+                "redes_sociales": "",
+                "formas_de_pago": "",
+                "zona_de_influencia": "",
+                "restricciones": "",
+                "foto": "",
+                "horarios": "",
+                "visibilidad": "",
+                "destacado": false
+            }
+        }
+    },
+    {
+        "colaborador": {
+            "nombre": "",
+            "apellido": "",
+            "telefono": "",
+            "contraseña": "",
+            "email": "",
+            "emprendimiento": {
+                "nombre": "Boliche",
+                "descripcion": "",
+                "rubro": "",
+                "direccion": "Santa fé",
+                "coordenadas": "",
+                "contacto": "",
+                "redes_sociales": "",
+                "formas_de_pago": "",
+                "zona_de_influencia": "",
+                "restricciones": "",
+                "foto": "",
+                "horarios": "",
+                "visibilidad": "",
+                "destacado": false
+            }
         }
     }
-}
+
+]
