@@ -1,35 +1,119 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
 
-<body>
+    <!-- iconos -->
+    <script src="https://kit.fontawesome.com/82b0862970.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
     <header class="header">
-        <h4>Microemprendimientos</h4>
-        <nav>
-            <ul class="menu">
-                <li class="menu-item"><a href="#inicio">Inicio</a></li>
-                <li class="menu-item"><a href="#contacti">Contacto</a></li>
-                <li class="menu-item"><a href="#ds">Ds</a></li>
-                <li class="menu-item"><a href="#sdf">Sdf</a></li>
-            </ul>
-        </nav>
+        <div class="logo-container">
+            <p>EmprendimientoLibre</p>
+            <i class="fa-regular fa-building"></i>
+        </div>
+      <nav class="menu-nav">
+        <ul class="menu-list">
+          <li class="menu-item"><a href="#">Inicio</a></li>
+          <li class="menu-item"><a href="#">Contacto</a></li>
+          <li class="menu-item"><a href="#">Emprendimientos</a></li>
+        </ul>
+      </nav>
+      <nav class="ingreso-nav">
+        <ul class="ingreso-list">
+            <li class="ingreso-item"><a class="iniciar-sesion" href="#">Iniciar sesion</a></li>
+            <li class="ingreso-item"><a class="registrarse" href="#">Registrarse</a></li>
+        </ul>
+      </nav>
     </header>
-<div class="buscador">
-    <form action="/search" method="get">
-        <input type="search" id="search" name="search" placeholder="Buscar emprendimientos">
-        <button type="submit">Search</button>
-    </form>
-
-</div>
-
-</body>
-
+    <main>
+      <article class="presentacion">
+        <section class="presentacion-texto">
+          <h1>Encontrá tu emprendimiento</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod labore
+            facilis consequatur. Facere ipsam eveniet fugit quaerat corrupti aut
+            tempora, dolorem debitis eum ea ullam recusandae doloremque iste?
+            Laborum, corrupti?
+          </p>
+        </section>
+            <img class="presentacion-imagen" src="images/20945988.jpg"/>
+      </article>
+      <article class="buscador">
+        <input
+          type="search"
+          id="search"
+          name="search"
+          placeholder="Buscar emprendimientos"
+        />
+      </article>
+      <article class="emprendimientos-destacados">
+        <h2>Emprendimientos destacados</h2>
+        <div class="emprendimientos-container">
+            <section class="card">
+                <img class="card-imagen" src="images/cards/emprendimiento-image-01.jpg">
+                <div class="card-contenido">
+                    <p class="card-tag">Destacado</p>
+                    <p class="card-rubro">Bazar</p>
+                    <h3 class="card-nombre">Bazar de pepe</h3>
+                    <p class="card-descripcion">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, recusandae atque. Illum maxime possimus eaque quod vitae vel fuga eum, sequi facere.</p>
+                    <h4 class="card-ubicacion">Av. Corrientes</h6>
+                </div>
+            </section>
+            <section class="card">
+                <img class="card-imagen" src="images/cards/emprendimiento-image-02.jpg">
+                <div class="card-contenido">
+                    <p class="card-tag">Destacado</p>
+                    <p class="card-rubro">Almacen</p>
+                    <h3 class="card-nombre">El chino</h3>
+                    <p class="card-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed cumque quibusdam magni eaque. Placeat nesciunt eligendi exercitationem accusamus.</p>
+                    <h4 class="card-ubicacion">Gral. Rivas</h6>
+                </div>
+            </section>
+            <section class="card">
+                <img class="card-imagen" src="images/cards/emprendimiento-image-03.jpg">
+                <div class="card-contenido">
+                    <p class="card-tag">Destacado</p>
+                    <p class="card-rubro">Barberia</p>
+                    <h3 class="card-nombre">La peluqueria de pepa</h3>
+                    <p class="card-descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex non eius ipsa ad, quod voluptatum temporibus blanditiis, assumenda facere numquam.</p>
+                    <h4 class="card-ubicacion">Montevideo</h6>
+                </div>
+            </section>
+        </div>
+      </article>
+    </main>
+    <footer>
+      <article class="sobre-nosotros">
+        <h3>Sobre nosotros</h3>
+        <ul>
+          <li><a href="#">Nuestra historia</a></li>
+          <li><a href="#">Nuestro equipo</a></li>
+          <li><a href="#">Recursos</a></li>
+        </ul>
+      </article>
+      <article class="soporte">
+        <h3>Soporte</h3>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contactanos</a></li>
+          <li><a href="#">Terminos de servicio</a></li>
+        </ul>
+      </article>
+      <article class="nuestras-redes">
+        <h3>Nuestras redes</h3>
+        <ul>
+          <li><a href="#">Instragram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Linkedin</a></li>
+        </ul>
+      </article>
+    </footer>
+  </body>
 </html>
