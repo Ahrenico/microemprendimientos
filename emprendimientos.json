@@ -1,0 +1,24 @@
+{
+    "colaborador": {
+        "nombre": "",
+        "apellido": "",
+        "telefono": "",
+        "contraseña": "",
+        "email": "",
+        "emprendimiento": {
+            "nombre": "",
+            "descripcion": "",
+            "rubro": "",
+            "direccion": "",
+            "coordenadas": "",
+            "contacto": "",
+            "redes_sociales": "",
+            "formas_de_pago": "",
+            "zona_de_influencia": "",
+            "restricciones": "",
+            "foto": "",
+            "horarios": "",
+            "visibilidad": ""
+        }
+    }
+}

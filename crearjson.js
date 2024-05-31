@@ -28,14 +28,12 @@ var colaborador={
 //var coordenadas=document.getElementById("zona-de-influencia").value;
 //console.log(coordenadas);
 var obj = JSON.stringify(colaborador);
-//console.log(obj);
+console.log(obj);
+//const fs = require('fs');
+//const filePath = 'emprendimientos.json';
+//const data = fr.readAsDataURL("emprendimientos.json");
 
-fs = require('fs');
 
-const data = fs.readFileSync(crearjson.js);
-data.push(obj);
-
-}
 function obtenerCoordenadas(direccion){
     const apiUrl = 'http://servicios.usig.buenosaires.gob.ar/normalizar';
 
@@ -78,4 +76,4 @@ function mostrarCoordenadas(data){
             });
         });
     })
-}
+}}
