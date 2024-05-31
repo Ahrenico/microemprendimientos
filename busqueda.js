@@ -30,6 +30,15 @@ function insertarListaSugerencia(resultados) {
             listItem.append(item.colaborador.emprendimiento.nombre
                 + ', ' +
                 item.colaborador.emprendimiento.direccion);
+            if(item.colaborador.emprendimiento.destacado){
+                let itemDestacado = document.createElement("span");
+                let itemDestacadoIcon = document.createElement("i");
+                itemDestacadoIcon.classList.add("fa-regular");
+                itemDestacadoIcon.classList.add("fa-star");
+                itemDestacado.append(itemDestacadoIcon);
+                listItem.append(itemDestacado);
+                listItem.classList.add("item-destacado");
+            }
             lista.append(listItem);
         });
     } else {

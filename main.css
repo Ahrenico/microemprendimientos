@@ -103,11 +103,22 @@ header {
 }
 
 .buscador li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #f5f5f5;
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
     margin-bottom: 0.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.buscador li span {
+    right: 0;
+}
+
+.buscador .item-destacado {
+    background-color: hsla(230, 100%, 84%, 0.593);
 }
 
 .buscador li:last-child {
@@ -116,6 +127,10 @@ header {
 
 .buscador li:hover {
     background-color: #e0e0e0;
+}
+
+.buscador .item-destacado:hover {
+    background-color: hsla(230, 100%, 79%, 0.726);
 }
 
 .emprendimientos-destacados {
