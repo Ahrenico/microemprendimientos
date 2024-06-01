@@ -1,251 +1,139 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Registro de usuarios</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="estilosRegistro.css"
-    />
 
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Registro de usuarios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" media="screen" href="estilosRegistro.css" />
+  <script>
+    function registroCompleto() {
+      event.preventDefault();
+      alert("Se ha completado exitosamente el registro de su emprendimiento, un administrador verificara su solicitud y se le informara si fue autorizado");
+      window.location.href = "index.html";
+    }
+  </script>
+</head>
 
-  <body>
-    <main class="container">
-      <form class="form" action="/submit" method="post">
-        <h1>Por favor complete el siguiente formulario para registrarse</h2>
+<body>
+  <main class="container">
+    <form class="form" onsubmit="registroCompleto(event)">
+      <h1>Por favor complete el siguiente formulario para registrarse</h2>
 
         <div class="field">
           <label for="nombre">Nombre</label>
-          <input
-            type="text"
-            placeholder="Ingrese nombre"
-            name="nombre"
-            id="nombre"
-            required
-            class="entrada-datos"
-          />
+          <input type="text" placeholder="Ingrese nombre" name="nombre" id="nombre" required class="entrada-datos" />
         </div>
 
         <div class="field">
           <label for="apellido">Apellido</label>
-          <input
-            type="text"
-            placeholder="Ingrese apellido"
-            name="apellido"
-            id="apellido"
-            required
-            class="entrada-datos"
-          />
+          <input type="text" placeholder="Ingrese apellido" name="apellido" id="apellido" required
+            class="entrada-datos" />
         </div>
 
         <div class="field">
           <label for="contraseña">Contraseña</label>
-          <input
-            type="password"
-            placeholder="************"
-            name="contraseña"
-            id="contraseña"
-            required
-            class="entrada-datos"
-          />
+          <input type="password" placeholder="************" name="contraseña" id="contraseña" required
+            class="entrada-datos" />
         </div>
 
         <div class="field">
           <label for="repetirContraseña">Repetir contraseña</label>
-          <input
-            type="password"
-            placeholder="************"
-            name="repetirContraseña"
-            id="repetirContraseña"
-            required
-            class="entrada-datos"
-          />
+          <input type="password" placeholder="************" name="repetirContraseña" id="repetirContraseña" required
+            class="entrada-datos" />
         </div>
 
         <div class="field">
           <label for="email">Email</label>
-          <input
-            type="text"
-            placeholder="Ingrese email"
-            name="email"
-            id="email"
-            required
-            class="entrada-datos"
-          />
+          <input type="email" placeholder="Ingrese email" name="email" id="email" required class="entrada-datos" />
         </div>
 
         <div class="field">
           <label for="telefono">Telefono</label>
-          <input
-            type="text"
-            placeholder="Ingrese telefono"
-            name="telefono"
-            id="telefono"
-            required
-            class="entrada-datos"
-          />
+          <input type="number" placeholder="Ingrese telefono" name="telefono" id="telefono" required
+            class="entrada-datos" />
         </div>
 
         <div class="field">
-          <label for="nombre-del-emprendimiento"
-            >Nombre del emprendimiento</label
-          >
-          <input
-            type="text"
-            placeholder="Ingrese nombre-del-emprendimiento"
-            name="nombre-del-emprendimiento"
-            id="nombre-del-emprendimiento"
-            required
-            class="entrada-datos"
-          />
+          <label for="nombre-del-emprendimiento">Nombre del emprendimiento</label>
+          <input type="text" placeholder="Ingrese nombre del emprendimiento" name="nombre-del-emprendimiento"
+            id="nombre-del-emprendimiento" required class="entrada-datos" />
         </div>
- 
+
         <div class="field">
-          <label for="descripcion-del-emprendimiento"
-            >descripcion del emprendimiento</label
-          >
-          <input
-            type="text"
-            placeholder="Ingrese descripcion-del-emprendimiento"
-            name="descripcion-del-emprendimiento"
-            id="descripcion-del-emprendimiento"
-            required
-            class="entrada-datos"
-          />
+          <label for="descripcion-del-emprendimiento">descripcion del emprendimiento</label>
+          <input type="text" placeholder="Ingrese descripcion del emprendimiento" name="descripcion-del-emprendimiento"
+            id="descripcion-del-emprendimiento" required class="entrada-datos" />
         </div>
 
         <div class="field">
           <label for="rubro">Rubro</label>
-          <input
-            type="text"
-            placeholder="Ingrese rubro"
-            name="rubro"
-            id="rubro"
-            required
-            class="entrada-datos"
-          />
+          <input type="text" placeholder="Ingrese rubro" name="rubro" id="rubro" required class="entrada-datos" />
         </div>
 
 
         <div class="field">
           <label for="direccion">Direccion</label>
-          <input 
-            type="text" 
-            placeholder="Ingrese direccion" 
-            name="direccion" 
-            id="direccion" 
-            required
-            class="entrada-datos"  
-            >
-            <div id="resultados" class="resultados"></div>
-            <script src="main.js"></script>
-          </div>
-          
+          <input type="text" placeholder="Ingrese direccion" name="direccion" id="direccion" required
+            class="entrada-datos">
+          <div id="resultados" class="resultados"></div>
+          <script src="registro.js"></script>
+        </div>
+
 
 
 
         <div class="field">
           <label for="contacto">Contacto</label>
-          <input
-            type="text"
-            placeholder="Ingrese contacto"
-            name="contacto"
-            id="contacto"
-            required
-            class="entrada-datos"
-          />
+          <input type="number" placeholder="Ingrese contacto" name="contacto" id="contacto" required
+            class="entrada-datos" />
         </div>
 
         <div class="field">
           <label for="redes-sociales">Redes sociales</label>
-          <input
-            type="text"
-            placeholder="Ingrese redes-sociales"
-            name="redes-sociales"
-            id="redes-sociales"
-            required
-            class="entrada-datos"
-          />
+          <input type="text" placeholder="Ingrese redes sociales" name="redes-sociales" id="redes-sociales" required
+            class="entrada-datos" />
         </div>
 
         <div class="field">
           <label for="formas-de-pago">Formas de pago</label>
-          <input
-            type="text"
-            placeholder="Ingrese formas-de-pago"
-            name="formas-de-pago"
-            id="formas-de-pago"
-            required
-            class="entrada-datos"
-          />
+          <input type="text" placeholder="Ingrese formas de pago" name="formas-de-pago" id="formas-de-pago" required
+            class="entrada-datos" />
         </div>
 
         <div class="field">
           <label for="zona-de-influencia">Zona de influencia</label>
-          <input
-            type="text"
-            placeholder="Ingrese zona-de-influencia"
-            name="zona-de-influencia"
-            id="zona-de-influencia"
-            required
-            class="entrada-datos"
-          />
+          <input type="text" placeholder="Ingrese zona de influencia" name="zona-de-influencia" id="zona-de-influencia"
+            class="entrada-datos" />
         </div>
 
         <div class="field">
           <label for="restricciones">Restricciones</label>
-          <input
-            type="text"
-            placeholder="Ingrese restricciones"
-            name="restricciones"
-            id="restricciones"
-            required
-            class="entrada-datos"
-          />
+          <input type="text" placeholder="Ingrese restricciones" name="restricciones" id="restricciones"
+            class="entrada-datos" />
         </div>
 
         <div class="field">
           <label for="foto">Foto</label>
-          <input
-            type="text"
-            placeholder="Ingrese foto"
-            name="foto"
-            id="foto"
-            required
-            class="entrada-datos"
-          />
+          <input type="text" placeholder="Ingres url de su logo" name="foto" id="foto" class="entrada-datos" />
         </div>
 
         <div class="field">
           <label for="horarios">Horarios</label>
-          <input
-            type="text"
-            placeholder="Ingrese horarios"
-            name="horarios"
-            id="horarios"
-            required
-            class="entrada-datos"
-          />
+          <input type="text" placeholder="Ingrese horarios" name="horarios" id="horarios" required
+            class="entrada-datos" />
         </div>
 
         <div class="field">
-          <label for="visibilidad">Visibilidad</label>
-          <input
-            type="text"
-            placeholder="Ingrese visibilidad"
-            name="visibilidad"
-            id="visibilidad"
-            required
-            class="entrada-datos"
-          />
+          <label for="visibilidad">Quiere que la ubicacion sea visible?</label>
+          <label><input required type="radio" name="opcion" value="Si" />Si</label>
+          <br>
+          <label><input required type="radio" name="opcion" value="No" />No</label>
         </div>
         <button type="submit" class="boton">Confirmar datos</button>
-      </form>
-    </main>
-  </body>
+    </form>
+  </main>
+</body>
+
 </html>
