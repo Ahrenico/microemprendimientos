@@ -262,9 +262,4 @@ var datos = {
   
     ]
   }
-var objeto = 
 
-
-array.forEach(element => {
-    
-});
