@@ -9,6 +9,7 @@
   <link rel="stylesheet" type="text/css" media="screen" href="estilosRegistro.css" />
   <script>
     function registroCompleto() {
+      event.preventDefault();
       alert("Se ha completado exitosamente el registro de su emprendimiento, un administrador verificara su solicitud y se le informara si fue autorizado");
       window.location.href = "index.html";
     }
@@ -17,7 +18,7 @@
 
 <body>
   <main class="container">
-    <form class="form" onsubmit="registroCompleto()">
+    <form class="form" onsubmit="registroCompleto(event)">
       <h1>Por favor complete el siguiente formulario para registrarse</h2>
 
         <div class="field">

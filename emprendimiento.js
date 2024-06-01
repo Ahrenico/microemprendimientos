@@ -263,22 +263,18 @@ var datos = {
   ]
 }
 
-//var coordenadas = datos.colaboradores[0].emprendimiento[0].coordenadas;
 
-
-//console.log(coordenadas)
-
-var idEmprendimiento=5;//Esto tendria que tomar el id del emprendimiento seleccionado cuando lo buscas
-var coordenadas = datos.colaboradores[idEmprendimiento].emprendimiento[0].coordenadas; 
+var idEmprendimiento = 5;//Esto tendria que tomar el id del emprendimiento seleccionado cuando lo buscas
+var coordenadas = datos.colaboradores[idEmprendimiento].emprendimiento[0].coordenadas;
 var coordenadasLeaflet = coordenadas.sort();//Leaflet usa un sistema de coordenadas diferente al de argentina asi que lo damos vuelta para que devuelva la posicion correcta
 var nombreEmprendimiento = datos.colaboradores[idEmprendimiento].emprendimiento[0].nombre;
 
 
-var logo=document.getElementById("logo");
-logo.src=datos.colaboradores[idEmprendimiento].emprendimiento[0].foto;//datos.colaboradores[idEmprendimiento].emprendimiento[0].foto;
+var logo = document.getElementById("logo");
+
 mostrarDatosDeEmprendimiento(idEmprendimiento);
-if(datos.colaboradores[idEmprendimiento].emprendimiento[0].visibilidad){
-mostrarMapa();
+if (datos.colaboradores[idEmprendimiento].emprendimiento[0].visibilidad) {
+  mostrarMapa();
 }
 
 function mostrarMapa() {
@@ -287,26 +283,26 @@ function mostrarMapa() {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(mapa);
 
-  //marcador
   L.marker(coordenadasLeaflet).addTo(mapa)
     .bindPopup(nombreEmprendimiento).openPopup();
-  
+
 }
 
-function mostrarDatosDeEmprendimiento(idEmprendimiento){
-  document.getElementById("emprendimiento").innerText=datos.colaboradores[idEmprendimiento].emprendimiento[0].nombre;
-  document.getElementById("titulo").innerText=datos.colaboradores[idEmprendimiento].emprendimiento[0].nombre;
-  document.getElementById("direccion").innerText=datos.colaboradores[idEmprendimiento].emprendimiento[0].direccion;
-  document.getElementById("rubro").innerText=datos.colaboradores[idEmprendimiento].emprendimiento[0].rubro;
-  document.getElementById("telefono").innerText=datos.colaboradores[idEmprendimiento].emprendimiento[0].contacto;
-  document.getElementById("descripcion").innerText=datos.colaboradores[idEmprendimiento].emprendimiento[0].descripcion;
-  document.getElementById("redes").innerText=datos.colaboradores[idEmprendimiento].emprendimiento[0].redes_sociales;
-  document.getElementById("horarios").innerText=datos.colaboradores[idEmprendimiento].emprendimiento[0].horarios;
-  
-  if(datos.colaboradores[idEmprendimiento].emprendimiento[0].restricciones!= null){
-  document.getElementById("restricciones").innerText=datos.colaboradores[idEmprendimiento].emprendimiento[0].restricciones;
+function mostrarDatosDeEmprendimiento(idEmprendimiento) {
+  logo.src = datos.colaboradores[idEmprendimiento].emprendimiento[0].foto;
+  document.getElementById("emprendimiento").innerText = datos.colaboradores[idEmprendimiento].emprendimiento[0].nombre;
+  document.getElementById("titulo").innerText = datos.colaboradores[idEmprendimiento].emprendimiento[0].nombre;
+  document.getElementById("direccion").innerText = datos.colaboradores[idEmprendimiento].emprendimiento[0].direccion;
+  document.getElementById("rubro").innerText = datos.colaboradores[idEmprendimiento].emprendimiento[0].rubro;
+  document.getElementById("telefono").innerText = datos.colaboradores[idEmprendimiento].emprendimiento[0].contacto;
+  document.getElementById("descripcion").innerText = datos.colaboradores[idEmprendimiento].emprendimiento[0].descripcion;
+  document.getElementById("redes").innerText = datos.colaboradores[idEmprendimiento].emprendimiento[0].redes_sociales;
+  document.getElementById("horarios").innerText = datos.colaboradores[idEmprendimiento].emprendimiento[0].horarios;
+
+  if (datos.colaboradores[idEmprendimiento].emprendimiento[0].restricciones != null) {
+    document.getElementById("restricciones").innerText = datos.colaboradores[idEmprendimiento].emprendimiento[0].restricciones;
   }
-  if(datos.colaboradores[idEmprendimiento].emprendimiento[0].zona_de_influencia!=null){
-  document.getElementById("zonaDeInfluencia").innerText=datos.colaboradores[idEmprendimiento].emprendimiento[0].zona_de_influencia;
-}
+  if (datos.colaboradores[idEmprendimiento].emprendimiento[0].zona_de_influencia != null) {
+    document.getElementById("zonaDeInfluencia").innerText = datos.colaboradores[idEmprendimiento].emprendimiento[0].zona_de_influencia;
+  }
 }

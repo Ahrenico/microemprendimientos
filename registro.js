@@ -12,7 +12,7 @@ function normalizarDireccion(direccion) {
             return response.json();
         })
         .then(data => {
-            return mostrarSugerenciasDeDireccionesNormalizadas(data);
+            return obtenerSugerenciasDeDireccionesNormalizadas(data);
         })
         .catch(error => {
             console.error('Error al normalizar la dirección:', error);
@@ -20,7 +20,7 @@ function normalizarDireccion(direccion) {
         });
 }
 
-function mostrarSugerenciasDeDireccionesNormalizadas(data) {
+function obtenerSugerenciasDeDireccionesNormalizadas(data) {
     var direcciones = [];
     var entries = Object.entries(data);
     entries.forEach(([key, value]) => {
@@ -41,12 +41,10 @@ function mostrarSugerenciasDeDireccionesNormalizadas(data) {
     return direcciones;
 }
 
-//const direccion = "peron 9000";
-//normalizarDireccion(direccion);
 
 let searchInput = document.getElementById('direccion');
 let sugerencias = document.getElementById('resultados');
-let lista = ["a", "b", "c"];
+let lista = [];
 let direccion;
 
 function mostrarResultados() {
@@ -78,10 +76,3 @@ function obtenerResultados() {
 }
 
 searchInput.addEventListener('input', mostrarResultados);
-
-// Agregar evento de selección al hacer clic en cualquier parte del documento
-document.addEventListener('click', (event) => {
-    if (!sugerencias.contains(event.target) && event.target !== searchInput) {
-        sugerencias.innerHTML = '';
-    }
-});
