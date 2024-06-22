@@ -31,6 +31,14 @@
           <input type="text" placeholder="Ingrese apellido" name="apellido" id="apellido" required
             class="entrada-datos" />
         </div>
+        
+        <div class="field">
+          <label for="direccionPersonal">Direccion personal</label>
+          <label for="">Comienza a escribir tu direccion y elige una de las opciones de la lista desplegable</label>
+          <input type="text" placeholder="Ingrese direccion personal" name="direccionPersonal" id="direccionPersonal" required
+            class="entrada-datos" />
+            <div id="resultadosPersonal" class="resultados"></div>
+          </div>
 
         <div class="field">
           <label for="contraseña">Contraseña</label>
@@ -74,10 +82,18 @@
 
 
         <div class="field">
-          <label for="direccion">Direccion</label>
-          <input type="text" placeholder="Ingrese direccion" name="direccion" id="direccion" required
+          <label for="emprendimiento fisico">Su emprendimiento tiene un local fisico?</label>
+          <label><input required type="radio" name="lugarFisico" value="Si" id="lugarFisicoSi" />Si</label>
+          <br>
+          <label><input required type="radio" name="lugarFisico" value="No" id="lugarFisicoNo" />No</label>
+        </div>
+
+        <div class="field">
+          <label id="direccionEmprendimientolabel1" for="direccionEmprendimiento">Direccion del emprendimiento</label>
+          <label id="direccionEmprendimientolabel2">Comienza a escribir tu direccion y elige una de las opciones de la lista desplegable</label>
+          <input type="text" placeholder="Ingrese direccion del emprendimiento" name="direccionEmprendimiento" id="direccionEmprendimiento" required
             class="entrada-datos">
-          <div id="resultados" class="resultados"></div>
+          <div id="resultadosEmprendimiento" class="resultados"></div>
           <script src="registro.js"></script>
         </div>
 

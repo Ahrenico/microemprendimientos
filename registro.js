@@ -42,23 +42,50 @@ function obtenerSugerenciasDeDireccionesNormalizadas(data) {
 }
 
 
-let searchInput = document.getElementById('direccion');
-let sugerencias = document.getElementById('resultados');
+let direccionEmprendimiento = document.getElementById('direccionEmprendimiento');
+let direccionEmprendimientolabel1 = document.getElementById('direccionEmprendimientolabel1');
+let direccionEmprendimientolabel2 = document.getElementById('direccionEmprendimientolabel2');
+let direccionPersonal = document.getElementById('direccionPersonal');
+let sugerenciasEmprendimiento = document.getElementById('resultadosEmprendimiento');
+let sugerenciasPersonal = document.getElementById('resultadosPersonal');
 let lista = [];
 let direccion;
+let a = false;
+direccionEmprendimiento.style.display= 'none';
+direccionEmprendimientolabel1.style.display= 'none';
+direccionEmprendimientolabel2.style.display= 'none';
+document.getElementById('lugarFisicoSi').addEventListener('change',function(){
+    if (document.getElementById('lugarFisicoSi').checked){
+        direccionEmprendimiento.style.display= 'block';
+        direccionEmprendimientolabel1.style.display= 'block';
+        direccionEmprendimientolabel2.style.display= 'block';
+    }
+})
+document.getElementById('lugarFisicoNo').addEventListener('change',function(){
+    if(document.getElementById('lugarFisicoNo').checked){
+        direccionEmprendimiento.style.display= 'none';
+        direccionEmprendimientolabel1.style.display= 'none';
+        direccionEmprendimientolabel2.style.display= 'none';
+    }
+})
 
-function mostrarResultados() {
-    normalizarDireccion(searchInput.value)
+direccionEmprendimiento.addEventListener('input',()  => mostrarResultados(direccionEmprendimiento,sugerenciasEmprendimiento));
+direccionPersonal.addEventListener('input',()  => mostrarResultados(direccionPersonal,sugerenciasPersonal));
+
+
+function mostrarResultados(direccion,sugerencias) {
+  a=false;
+    normalizarDireccion(direccion.value)
         .then(direcciones => {
             lista = direcciones;
-            obtenerResultados();
+            mostrarSugerencias(direccion,sugerencias);
         })
         .catch(error => {
             console.error('Error al obtener las direcciones normalizadas:', error);
         });
 }
 
-function obtenerResultados() {
+function mostrarSugerencias(direccion,sugerencias) {
 
     sugerencias.innerHTML = '';
 
@@ -66,13 +93,18 @@ function obtenerResultados() {
         const sugerencia = document.createElement('div');
         sugerencia.classList.add('autocomplete-item');
         sugerencia.innerText = item;
+        direccion.addEventListener('blur', function(event) {
+            if(a == false){
+                direccion.focus()}
+
+          });
+
         sugerencia.addEventListener('click', () => {
-            searchInput.value = item;
-            console.log(item);
+            direccion.value = item;
             sugerencias.innerHTML = '';
+            a=true;
+
         });
         sugerencias.appendChild(sugerencia);
     });
 }
-
-searchInput.addEventListener('input', mostrarResultados);
