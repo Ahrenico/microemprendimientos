@@ -324,7 +324,7 @@ function insertarListaSugerencia(resultados) {
         resultados.forEach(colaborador => {
             colaborador.emprendimiento.forEach(emprendimiento => {
                 let listItem = document.createElement("li");
-                listItem.append(emprendimiento.nombre + ', ' + emprendimiento.direccion);
+                listItem.append(emprendimiento.nombre + ', ' + emprendimiento.direccion + ', '+ emprendimiento.rubro );
                 if (emprendimiento.destacado) {
                     let itemDestacado = document.createElement("span");
                     let itemDestacadoIcon = document.createElement("i");
