@@ -8,6 +8,7 @@ var datos = {
         "contraseña": "123456789",
         "email": "mSosa@gmail.com",
         "emprendimiento": [{
+          "id": 0,
           "nombre": "Veterinaria Invet 24 hs",
           "descripcion": "Veterinaria",
           "rubro": "Mascotas",
@@ -32,6 +33,7 @@ var datos = {
         "contraseña": "sd",
         "email": "bambrosoni@gmail.com",
         "emprendimiento": [{
+          "id": 1,
           "nombre": "Alma de Barrio",
           "descripcion": "Restaurante",
           "rubro": "Comida",
@@ -56,6 +58,7 @@ var datos = {
         "contraseña": "",
         "email": "dtargaryen@cemic.edu.ar",
         "emprendimiento": [{
+          "id": 2,
           "nombre": "LA FACU",
           "descripcion": "Complejo deportivo",
           "rubro": "Deportes y recreacion",
@@ -81,6 +84,7 @@ var datos = {
         "contraseña": "sdf",
         "email": "caquino@gmail.com",
         "emprendimiento": [{
+          "id": 3,
           "nombre": "Macetas La Alemana",
           "descripcion": "Floreria",
           "rubro": "Floreria",
@@ -106,6 +110,7 @@ var datos = {
         "contraseña": "asdf",
         "email": "jperez@gmail.com",
         "emprendimiento": [{
+          "id": 4,
           "nombre": "cerrajero Malvinas Argentinas",
           "descripcion": "CERRAJERO. Soluciones de cerrajería - Blindajes - Seguridad Electrónica",
           "rubro": "Cerrajeria",
@@ -131,6 +136,7 @@ var datos = {
         "contraseña": "",
         "email": "prubio@gmail.com",
         "emprendimiento": [{
+          "id": 5,
           "nombre": "Don Valentín Parrilla",
           "descripcion": "Parrilla",
           "rubro": "Comida",
@@ -156,6 +162,7 @@ var datos = {
         "contraseña": "sdf",
         "email": "dmassa@gmail.com",
         "emprendimiento": [{
+          "id": 6,
           "nombre": "Kangaroo Gym",
           "descripcion": "gimnasio",
           "rubro": "Deportes y recreacion",
@@ -180,6 +187,7 @@ var datos = {
         "contraseña": "sad",
         "email": "masolis@gmail.com",
         "emprendimiento": [{
+          "id": 7,
           "nombre": "Futbol La Esquina",
           "descripcion": "Canchas para alquilar",
           "rubro": "Deportes y recreacion",
@@ -204,6 +212,7 @@ var datos = {
         "contraseña": "sadf",
         "email": "cgarcia@gmail.com",
         "emprendimiento": [{
+          "id": 8,
           "nombre": "Peluquerias Amadeus",
           "descripcion": "Peluqueria",
           "rubro": "Belleza",
@@ -228,6 +237,7 @@ var datos = {
         "contraseña": "",
         "email": "mBecerra@gmail.com",
         "emprendimiento": [{
+          "id": 9,
           "nombre": "Almacen Martin",
           "descripcion": "Almacen",
           "rubro": "Supermercados",
@@ -252,6 +262,7 @@ var datos = {
         "contraseña": "sdfa",
         "email": "vperez@gmail.com",
         "emprendimiento": [{
+          "id": 10,
           "nombre": "Canchas Lemos FC",
           "descripcion": "Canchas para alquilar",
           "rubro": "Deportes y recreacion",
@@ -286,9 +297,11 @@ document.addEventListener("DOMContentLoaded", function() {
             
             let resultados = datos.colaboradores.filter(colaborador => 
                 colaborador.emprendimiento.some(emprendimiento => 
-                    emprendimiento.nombre.toLowerCase().includes(busqueda)
+                  Object.values(emprendimiento).some(valor =>
+                    typeof valor === 'string' && valor.toLowerCase().includes(busqueda)
                 )
-            );
+            )
+        );
 
             let resultadosOrdenados = resultados.sort((a, b) => {
                 let aDestacado = a.emprendimiento.some(e => e.destacado);
@@ -320,6 +333,11 @@ function insertarListaSugerencia(resultados) {
                     listItem.append(itemDestacado);
                     listItem.classList.add("item-destacado");
                 }
+                listItem.addEventListener('click', function() {
+                  let id = emprendimiento.id;
+                  window.location.href = 'emprendimiento.html?id=' + id;  //como hacer para que dirija a la pagina del emprendimiento??
+              });
+
                 lista.append(listItem);
             });
         });

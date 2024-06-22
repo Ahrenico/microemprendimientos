@@ -263,8 +263,8 @@ var datos = {
   ]
 }
 
-
-var idEmprendimiento = 5;//Esto tendria que tomar el id del emprendimiento seleccionado cuando lo buscas
+var urlParams = new URLSearchParams(window.location.search);
+var idEmprendimiento = urlParams.get('id');
 var coordenadas = datos.colaboradores[idEmprendimiento].emprendimiento[0].coordenadas;
 var coordenadasLeaflet = coordenadas.sort();//Leaflet usa un sistema de coordenadas diferente al de argentina asi que lo damos vuelta para que devuelva la posicion correcta
 var nombreEmprendimiento = datos.colaboradores[idEmprendimiento].emprendimiento[0].nombre;
