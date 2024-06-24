@@ -5,10 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="styles/main.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <script src="scripts/busqueda.js"></script>
     <!-- iconos -->
-    <script src="https://kit.fontawesome.com/82b0862970.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/82b0862970.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
@@ -22,8 +35,12 @@
       </nav>
       <nav class="ingreso-nav">
         <ul class="ingreso-list">
-            <li class="ingreso-item"><a class="iniciar-sesion" href="#">Iniciar sesion</a></li>
-            <li class="ingreso-item"><a class="registrarse" href="registro.html">Registrarse</a></li>
+          <li class="ingreso-item">
+            <a class="iniciar-sesion" href="#">Iniciar sesion</a>
+          </li>
+          <li class="ingreso-item">
+            <a class="registrarse" href="registro.html">Registrarse</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -38,7 +55,7 @@
             Laborum, corrupti?
           </p>
         </section>
-            <img class="presentacion-imagen" src="images/20945988.jpg"/>
+        <img class="presentacion-imagen" src="images/20945988.jpg" />
       </article>
       <article class="buscador">
         <input
@@ -51,38 +68,91 @@
       </article>
       <article class="emprendimientos-destacados">
         <h2>Emprendimientos destacados</h2>
-        <div class="emprendimientos-container">
-            <section class="card">
-                <img class="card-imagen" src="images/cards/emprendimiento-image-01.jpg">
-                <div class="card-contenido">
-                    <p class="card-tag">Destacado</p>
-                    <p class="card-rubro">Bazar</p>
-                    <h3 class="card-nombre">Bazar de pepe</h3>
-                    <p class="card-descripcion">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, recusandae atque. Illum maxime possimus eaque quod vitae vel fuga eum, sequi facere.</p>
-                    <h4 class="card-ubicacion">Av. Corrientes</h6>
-                </div>
-            </section>
-            <section class="card">
-                <img class="card-imagen" src="images/cards/emprendimiento-image-02.jpg">
-                <div class="card-contenido">
-                    <p class="card-tag">Destacado</p>
-                    <p class="card-rubro">Almacen</p>
-                    <h3 class="card-nombre">El chino</h3>
-                    <p class="card-descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed cumque quibusdam magni eaque. Placeat nesciunt eligendi exercitationem accusamus.</p>
-                    <h4 class="card-ubicacion">Gral. Rivas</h6>
-                </div>
-            </section>
-            <section class="card">
-                <img class="card-imagen" src="images/cards/emprendimiento-image-03.jpg">
-                <div class="card-contenido">
-                    <p class="card-tag">Destacado</p>
-                    <p class="card-rubro">Barberia</p>
-                    <h3 class="card-nombre">La peluqueria de pepa</h3>
-                    <p class="card-descripcion">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex non eius ipsa ad, quod voluptatum temporibus blanditiis, assumenda facere numquam.</p>
-                    <h4 class="card-ubicacion">Montevideo</h6>
-                </div>
-            </section>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <img
+                class="card-imagen"
+                src="images/emprendimientos/Alma de Barrio.JPG"
+              />
+              <div class="card-contenido">
+                <p class="card-tag">Destacado</p>
+                <p class="card-rubro">Mascotas</p>
+                <h3 class="card-nombre">Veterinaria Invet 24 hs</h3>
+                <p class="card-descripcion">
+                  Veterinaria con atención 24 horas para todas las necesidades de tus mascotas, brindando cuidados de emergencia y servicios completos.
+                </p>
+                <h4 class="card-ubicacion">San Miguel</h4>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                class="card-imagen"
+                src="images/emprendimientos/La Facu.jpg"
+              />
+              <div class="card-contenido">
+                <p class="card-tag">Destacado</p>
+                <p class="card-rubro">Deportes y recreacion</p>
+                <h3 class="card-nombre">La Facu</h3>
+                <p class="card-descripcion">
+                  Complejo deportivo para todas las edades, con instalaciones modernas y una amplia variedad de actividades recreativas y deportivas.
+                </p>
+                <h4 class="card-ubicacion">Los Polvorines</h4>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                class="card-imagen"
+                src="images/emprendimientos/Macetas La Alemana.jpg"
+              />
+              <div class="card-contenido">
+                <p class="card-tag">Destacado</p>
+                <p class="card-rubro">Floreria</p>
+                <h3 class="card-nombre">Macetas La Alemana</h3>
+                <p class="card-descripcion">
+                  Florería con una gran variedad de plantas, flores y macetas, ideal para decorar tu hogar con un toque natural y fresco.
+                </p>
+                <h4 class="card-ubicacion">Los Polvorines</h4>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                class="card-imagen"
+                src="images/emprendimientos/Cerrajero Malvinas Argentinas.jpg"
+              />
+              <div class="card-contenido">
+                <p class="card-tag">Destacado</p>
+                <p class="card-rubro">Barberia</p>
+                <h3 class="card-nombre">Cerrajero Malvinas Argentinas</h3>
+                <p class="card-descripcion">
+                  Soluciones de cerrajería, blindajes y seguridad electrónica. Expertos en protección para tu hogar y negocio.
+                </p>
+                <h4 class="card-ubicacion">Los Polvorines</h4>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img
+                class="card-imagen"
+                src="images/emprendimientos/Don Valentin Parrilla.jpg"
+              />
+              <div class="card-contenido">
+                <p class="card-tag">Destacado</p>
+                <p class="card-rubro">Comida</p>
+                <h3 class="card-nombre">Don Valentín Parrilla</h3>
+                <p class="card-descripcion">
+                  Parrilla que ofrece los mejores cortes de carne, con un ambiente acogedor y una experiencia gastronómica única.
+                </p>
+                <h4 class="card-ubicacion">San Miguel</h4>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="swiper-pagination"></div>
       </article>
     </main>
     <footer>
@@ -111,5 +181,11 @@
         </ul>
       </article>
     </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Inicializar Swiper -->
+    <script src="scripts/carousel.js"></script>
   </body>
 </html>
