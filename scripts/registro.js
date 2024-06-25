@@ -56,7 +56,7 @@ direccionEmprendimientolabel1.style.display= 'none';
 direccionEmprendimientolabel2.style.display= 'none';
 document.getElementById('lugarFisicoSi').addEventListener('change',function(){
     if (document.getElementById('lugarFisicoSi').checked){
-
+        direccionEmprendimiento.setAttribute('required', 'requiered');
         direccionEmprendimiento.style.display= 'block';
         direccionEmprendimientolabel1.style.display= 'block';
         direccionEmprendimientolabel2.style.display= 'block';
