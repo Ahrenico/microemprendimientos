@@ -68,6 +68,10 @@ document.getElementById('lugarFisicoNo').addEventListener('change',function(){
         direccionEmprendimientolabel1.style.display= 'none';
         direccionEmprendimientolabel2.style.display= 'none';
         direccionEmprendimiento.removeAttribute('required');
+        if(a === false){
+            direccionEmprendimiento.value = '';
+            sugerenciasEmprendimiento.innerHTML = '';
+        }
     }
 })
 
